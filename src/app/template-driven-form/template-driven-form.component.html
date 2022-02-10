@@ -1,25 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="Home">Online Registration Form</a>
-    </div>
-</nav>
+
 
 <form #simpleform="ngForm" (ngSubmit)=getUseritem(simpleform.value);simpleform.reset();>
     
-        <div class="form-group col-md-6">
-          <label for="Name">Name</label>
+  <div class="form-group mt-3 col-md-6">
+          <label for="Name"><b>Name</b></label>
           <input name="Name" #name="ngModel" required type="text" class="form-control" id="inputName4" placeholder="Name" ngModel>
         </div>
         <div class="alert alert-danger" *ngIf="name.invalid && name.touched" style="color: blue;" >*A name is required</div>
         <div class="form-group col-md-6">
-        <label for="Email">Email</label>  
-        <input name="Email" #Email="ngModel" required type="email" class="form-control" 
-        id="inputEmail4" placeholder="Email" ngModel >
+          <label for="Email"><b>Email</b></label>  
+          <input name="Email" #Email="ngModel" required type="email" class="form-control" 
+          id="inputEmail4" placeholder="Email" ngModel >
       </div>
       <div class="alert alert-danger"
         *ngIf="Email.invalid && Email.touched" style="color: blue;" >*Email is required</div>
-      <div class="form-group col-md-6">
-        <label for="Password">Password</label>
+        <div class="form-group col-md-6">
+        <label for="Password"><b>Password</b></label>
         <input name="Password" #Password="ngModel" required type="password" class="form-control" 
         id="inputPassword4" placeholder="Password" 
         ngModel>
@@ -27,21 +23,21 @@
       <div class="alert alert-danger"
         *ngIf="Password.invalid && Password.touched" style="color: blue;" >*Password is required</div>
       <div class="form-group col-md-6">
-      <label for="Address">Address</label>
+      <label for="Address"><b>Address</b></label>
       <input name="Address" #Address="ngModel" required type="text" class="form-control"
 id="inputAddress" placeholder="1234 Main St" ngModel >
     </div>
     <div class="alert alert-danger"
         *ngIf="Address.invalid && Address.touched" style="color: blue;" >*Address is required</div>
     <div class="form-group col-md-6">
-        <label for="City">City</label>
+        <label for="City"><b>City</b></label>
         <input name="City" #City="ngModel" required type="text" class="form-control" 
         id="inputCity" placeholder="City" ngModel>
       </div>
       <div class="alert alert-danger"
         *ngIf="City.invalid && City.touched" style="color: blue;" >*City is required</div>
         <div class="form-group col-md-4">
-        <label for="State">State</label>
+        <label for="State"><b>State</b></label>
         <select name="State" id="inputState" class="form-control">
           <option selected>Choose...</option>
           <option>Andhra Pradesh</option>
@@ -76,7 +72,7 @@ id="inputAddress" placeholder="1234 Main St" ngModel >
       </div>
     
     <div class="form-group">
-        <label for="Branch">Branch</label>
+        <label for="Branch"><b>Branch</b></label>
       </div>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>

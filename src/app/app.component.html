@@ -1,1 +1,22 @@
-<app-template-driven-form></app-template-driven-form>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a style="font-size:30px;" class="navbar-brand" routerLink="">Dinesh-Angular</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+          <a routerLink="TDF" class="nav-links">TDF</a>
+      </li>
+      <li class="nav-item">
+          <a routerLink="CRUD" class="nav-links">CRUD</a>
+      </li>
+      <li class="nav-item">
+          <a routerLink="Crudwithjson" class="nav-links">Crud With Json</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <router-outlet></router-outlet>

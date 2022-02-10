@@ -1,0 +1,61 @@
+
+<div class="container">
+    <div class="row">&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="AddEmployeeTitleContainer">
+            <div class="addEmployeeTitleContainer">&nbsp;
+                <div style=font-weight:bold;>Add Employee Details</div>
+                <button class="btn btn-warning "(click)="addNewEmployeeBtn()">Add +</button>
+            </div>&nbsp;
+        <div *ngIf="newEmployeeClicked">
+            <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Enter Your Name" [(ngModel)]="model.name">
+                </div>
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <input name="position" type="text" class="form-control" id="position" placeholder="Enter Your Position" [(ngModel)]="model.position">
+                  </div>
+                  <div class="submitBtnContainer">
+                    <div type="submit" class="btn btn-primary" (click)="addEmployee()">Save</div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col" class="onetitle">Name</th>
+                    <th scope="col" class="twotitle">Position</th>
+                    <th scope="col" class="threetitle">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees; let i= index">
+                    <td class="one">{{employee.name}}</td>
+                    <td class="two">{{employee.position}}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="editEmployee(i)">Edit</button> &nbsp; &nbsp;
+                        <button class="btn btn-danger" (click)="deleteEmployee(i)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="editEmployeeTitleContainer">
+                <div class="" style=font-weight:bold;>Edit Employee</div>&nbsp;
+                <form>
+                    <div class="form group name">
+                        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model2.name" placeholder="Name Here">
+                    </div> &nbsp;
+                    <div class="form group position">
+                        <input type="text" class="form-control" id="position" name="position" [(ngModel)]="model2.position" placeholder="Position Here">&nbsp;
+                    </div>
+                    <button class="btn btn-primary" type="submit" (click)="updateEmployee()">Update</button>
+                
+                </form>
+            </div>
+</div>
+
+        
+    
+
